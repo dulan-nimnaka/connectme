@@ -207,3 +207,31 @@ footer {
     width: 100%;
 
 }
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--primary);
+    transition: var(--transition);
+
+}
+
+/* Hover effect for theme toggle */
+.theme-toggle:hover {
+    transform: rotate(30deg);
+
+}
+
