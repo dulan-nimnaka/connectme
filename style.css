@@ -235,3 +235,18 @@ footer {
 
 }
 
+/* Dark Theme Styles */
+body.dark-theme {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #ecf0f1;
+
+}
+
+/* Targets the dark theme elements */
+body.dark-theme .bio,
+body.dark-theme .link-card,
+body.dark-theme .link-url {
+    color: #bdc3c7;
+}
+
+
