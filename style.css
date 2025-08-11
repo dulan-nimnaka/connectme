@@ -13,3 +13,9 @@
     transition: all 0.3s ease;
 }
 
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
