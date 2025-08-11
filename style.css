@@ -272,3 +272,20 @@ body.dark-theme .link-url {
     }
 }
 
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+
+    }
+
+    .profile {
+        width: 120px;
+        height: 120px;
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
