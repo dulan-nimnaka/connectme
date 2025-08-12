@@ -38,7 +38,25 @@ themeToggle.addEventListener("click", () => {
         themeIcon.classList.remove("fa-sun");
         themeIcon.classList.add("fa-moon");
     }
+});
+
+// Scroll Animation Functionality
+// DOM Element
+const linkCards = document.querySelectorAll(".link-card");
+
+// Add scroll animation to each link card
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.Style.animation = "slideUp 0.5s ease-out forwards"; // Apply slide-up animation
+        }
+    });
+}, {threshold: 0.1}); // Trigger when 10% of the element is visible
+
+linkCards.forEach(card => {
+    observer.observe(card); // Observe each link card for intersection changes
 })
+
 
 
 
