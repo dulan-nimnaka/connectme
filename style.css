@@ -243,6 +243,10 @@ body.dark-theme {
 }
 
 /* Targets the dark theme elements */
+body.dark-theme h1 {
+    color: white;
+}
+
 body.dark-theme .bio,
 body.dark-theme .link-card {
     background: #2c3e50;
