@@ -7,7 +7,7 @@ const themeIcon = themeToggle.querySelector("i");
 
 // Check for saved theme preference or respect OS preference
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)"); // Detect if the user prefers dark mode
-const currentTheme = loacalStorage.getItem("theme"); // Get the current theme from localStorage
+const currentTheme = localStorage.getItem("theme"); // Get the current theme from localStorage
 
 // Initial Theme Application
 /*
