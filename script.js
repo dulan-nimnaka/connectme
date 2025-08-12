@@ -57,14 +57,38 @@ linkCards.forEach(card => {
     observer.observe(card); // Observe each link card for intersection changes
 })
 
+// Analytics Script
+// Google Tag Manager
+function setupLinkAnalytics() {
+    try {
+        document.querySelectorAll(".link-card").forEach(link => {
+            link.addEventListener("click", function() {
+                const linkTitle = this.querySelector(".link-title").textContent; // Get the link title
+                const linkUrl = this.href // Get the link URL
+
+                // Send click event to Google Analytics
+                gtag("event", "link_click", {
+                    "event_category": "Social Links",
+                    "event_label": linkTitle,
+                    "link_url": linkUrl,
+                    "transport_type": "beacon" /// Ensures tracking even if page unloads
+                });
+
+                // For external links, delay navigation to ensure tracking
+                if (!linkUrl.includes(window.location.hostname)) {
+                    e.preventDefault(); // Prevent default navigation
+                    setTimeout(() => {
+                        window.location.href = linkUrl; // Navigate to the link URL after a short delay
+                    }, 200); // 200ms delay
+                }
+
+            });
+        });
+    } catch (error) {
+        console.error("Analytics error: ", error);
+    }
+}
 
 
-
-
-
-
-
-
-
-//year
+// Update the footer year dynamically
 document.getElementById("year").textContent = new Date().getFullYear();
